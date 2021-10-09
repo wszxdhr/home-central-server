@@ -1,6 +1,6 @@
 {
   "name": "home-central-server",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "My home central front of my door",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -42,7 +42,8 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@bitauth/libauth": "^1.17.1"
+    "@bitauth/libauth": "^1.17.1",
+    "koa": "^2.13.3"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
@@ -66,7 +67,7 @@
     "standard-version": "^9.0.0",
     "ts-node": "^9.0.0",
     "typedoc": "^0.19.0",
-    "typescript": "^4.0.2"
+    "typescript": "4.0.2"
   },
   "files": [
     "build/main",
