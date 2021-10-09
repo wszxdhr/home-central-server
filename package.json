@@ -1,11 +1,11 @@
 {
-  "name": "home-central",
+  "name": "home-central-server",
   "version": "1.0.0",
   "description": "My home central front of my door",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/wszxdhr/home-central",
+  "repository": "https://github.com/wszxdhr/home-central-server",
   "license": "MIT",
   "keywords": [],
   "scripts": {
