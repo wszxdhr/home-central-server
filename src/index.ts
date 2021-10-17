@@ -1,19 +1,18 @@
 export * from './lib/async';
 export * from './lib/number';
-import axios from 'axios';
 import Koa, { Context } from 'koa';
-import qs from 'qs';
 
-import Car from './configs/car.json';
+import { startJobs } from './jobs';
+import { ResponseStore } from './jobs/store';
 
-console.log('hello world!!');
+console.log('Service is runing...');
 const app = new Koa();
 
+startJobs();
+
 app.use(async (ctx: Context, next: () => Promise<void>) => {
-  ctx.body = (await axios.post('https://app-connected.gtmc.com.cn/appcarnetwork/app/getVehicleStatus', qs.stringify(Car.reqBody), {
-    headers: Car.headers
-  })).data;
-  console.log(ctx.body);
+  console.log(ResponseStore.get('CarFuelStatus')?.data);
+  ctx.body = ResponseStore.get('CarFuelStatus')?.data?.drivingRange;
   await next();
 });
 

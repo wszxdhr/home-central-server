@@ -1,0 +1,52 @@
+{
+  "common": {
+    "url": "https://app-connected.gtmc.com.cn/appcarnetwork/app/getVehicleStatus",
+    "headers": {
+      "Host": "app-connected.gtmc.com.cn",
+      "Accept": "*/*",
+      "Authorization": "",
+      "appVersion": "",
+      "type": "",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "zh-Hans-CN;q=1",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "fyxDevice": "",
+      "User-Agent": "",
+      "Connection": "keep-alive",
+      "Cookie": ""
+    },
+    "body": {
+      "Authorization": "",
+      "appVersion": "",
+      "fyxDevice": "",
+      "phone": "",
+      "userId": "",
+      "vin": ""
+    },
+    "method": "post",
+    "interval": "120000"
+  },
+  "requests": {
+    "CarFuelStatus": {
+      "url": "https://app-connected.gtmc.com.cn/appcarnetwork/app/getVehicleStatus",
+      "body": "common",
+      "headers": "common",
+      "method": "post",
+      "interval": "common"
+    },
+    "EvChargingStatus": {
+      "url": "https://app-connected.gtmc.com.cn/appcarnetwork/app/batteryCharging",
+      "body": "common",
+      "headers": "common",
+      "method": "post",
+      "interval":  "common"
+    },
+    "RecordInfo": {
+      "url": "https://app-connected.gtmc.com.cn/appcarnetwork/app/getCarRecord",
+      "body": "common",
+      "headers": "common",
+      "method": "post",
+      "interval":  "common"
+    }
+  }
+}
