@@ -1,0 +1,46 @@
+{
+    "common": {
+        "url": "https://xxx.xxx:xxxx/webapi/entry.cgi",
+        "headers": {
+            ":authority": "xxx.xxx:xxxx",
+            ":method": "POST",
+            ":path": "/webapi/entry.cgi",
+            ":scheme": "https",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "zh-CN,zh;q=0.9",
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "cookie": "",
+            "origin": "https://xxx.xxx:xxxx",
+            "referer": "https://xxx.xxx:xxxx/",
+            "sec-ch-ua": "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
+            "x-requested-with": "",
+            "x-syno-token": ""
+        },
+        "body": {},
+        "method": "post",
+        "interval": "10000"
+    },
+    "requests": {
+        "MessageList": {
+            "url": "https://xxx.xxx:xxxx/webapi/entry.cgi",
+            "body": {
+                "action": "\"load\"",
+                "lastRead": "1636470145",
+                "lastSeen": "1636470145",
+                "api": "SYNO.Core.DSMNotify",
+                "method": "notify",
+                "version": "1"
+            },
+            "headers": "common",
+            "method": "post",
+            "interval": "common"
+        }
+    }
+}
