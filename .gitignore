@@ -8,3 +8,4 @@ coverage
 *.log
 package-lock.json
 src/requests/**/config.json
+src/outputs/ePaper/config.json

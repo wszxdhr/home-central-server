@@ -4,6 +4,8 @@ import Koa, { Context } from 'koa';
 
 import { startJobs } from './jobs';
 import { ResponseStore } from './jobs/store';
+// 向墨水屏输出
+import './outputs/ePaper';
 
 console.log('Service is runing...');
 const app = new Koa();
