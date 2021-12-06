@@ -5,6 +5,9 @@ import moment from 'moment';
 
 const router = new Router();
 
+const ePaper7in5Width = 800;
+const ePaper7in5Height = 480;
+
 router.get(
   '/ePaper7in5/test',
   async (ctx: Context, next: () => Promise<void>) => {
@@ -13,8 +16,8 @@ router.get(
     <body>
       <canvas id="canvas" height="480" width="800" />
       <script>
-        const width = 800;
-        const height = 480;
+        const width = ${ePaper7in5Width};
+        const height = ${ePaper7in5Height};
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         ctx.fillStyle = "#000000";
@@ -45,9 +48,6 @@ router.get(
     await next();
   }
 );
-
-const ePaper7in5Width = 800;
-const ePaper7in5Height = 480;
 
 const resList: {
   imgData: Uint8ClampedArray;
