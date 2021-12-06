@@ -25,7 +25,7 @@ const outputToEPaper = async (width: number, height: number, url: string) => {
     deviceScaleFactor: 1,
   });
   setInterval(async () => {
-    await frontPage.goto('https://www.timer.net/zh/%E6%97%B6%E9%92%9F.html');
+    await frontPage.goto('https://time.is/zh/');
     const screenshotBase64 =
       'data:img/jpg;base64,' +
       (await frontPage.screenshot({
