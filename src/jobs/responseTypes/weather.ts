@@ -1,5 +1,3 @@
-import { WeatherMap } from '../../utils/weatherMap';
-
 type status = 'ok' | 'failed';
 
 export interface RealtimeWeatherType {
