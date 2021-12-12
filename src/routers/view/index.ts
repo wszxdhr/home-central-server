@@ -3,6 +3,8 @@ import { Context } from 'koa';
 import Router from 'koa-router';
 import moment from 'moment';
 
+import { draw7in5 } from '../../outputs/ePaper/draw7in5';
+
 const router = new Router();
 
 const ePaper7in5Width = 800;
@@ -12,7 +14,14 @@ router.get(
   '/ePaper7in5/test',
   async (ctx: Context, next: () => Promise<void>) => {
     ctx.body = `<html>
-    <head></head>
+    <head>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
     <body>
       <canvas id="canvas" height="480" width="800" />
       <script>
@@ -59,8 +68,6 @@ const makeData = (text?: string) => {
   const canvasEle = canvas.createCanvas(ePaper7in5Width, ePaper7in5Height);
   const context = canvasEle.getContext('2d');
   let item;
-  context.textAlign = 'center';
-  context.font = '30px Arial';
   if (text) {
     context.fillText(text, 400, 440);
     item = {
@@ -69,26 +76,7 @@ const makeData = (text?: string) => {
         .data,
     };
   } else {
-    context.strokeStyle = 'black';
-    context.lineWidth = 3;
-    context.beginPath();
-    context.moveTo(200, 400);
-    context.lineTo(200, 200);
-    context.lineTo(150, 200);
-    context.lineTo(400, 50);
-    context.lineTo(650, 200);
-    context.lineTo(600, 200);
-    context.lineTo(600, 400);
-    context.moveTo(320, 400);
-    context.lineTo(320, 300);
-    context.lineTo(480, 300);
-    context.lineTo(480, 400);
-    context.stroke();
-    context.fillText(
-      `当前时间：${moment().format('YYYY-MM-DD HH:mm')}`,
-      400,
-      440
-    );
+    draw7in5(context);
     const { data: imgData } = context.getImageData(
       0,
       0,

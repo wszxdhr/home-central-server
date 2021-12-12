@@ -1,0 +1,25 @@
+{
+    "common": {
+        "url": "https://api.caiyunapp.com/v2.5/111/123,123/realtime.json",
+        "headers": {},
+        "body": {},
+        "method": "get",
+        "interval": "10000"
+    },
+    "requests": {
+        "RealtimeWeather": {
+            "url": "https://api.caiyunapp.com/v2.5/111/123,123/realtime.json",
+            "body": {},
+            "headers": "common",
+            "method": "get",
+            "interval": "common"
+        },
+        "WeatherReport": {
+            "url": "https://api.caiyunapp.com/v2.5/111/123,123/weather.json",
+            "body": {},
+            "headers": "common",
+            "method": "get",
+            "interval": "common"
+        }
+    }
+}
